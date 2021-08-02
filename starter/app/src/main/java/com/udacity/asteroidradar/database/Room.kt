@@ -13,7 +13,7 @@ interface AsteroidDao {
     @Query("DELETE from ${Constants.ASTEROID_TABLE}")
     suspend fun deleteAsteroids()
 
-    @Query("SELECT * from ${Constants.ASTEROID_TABLE}")
+    @Query("SELECT * from ${Constants.ASTEROID_TABLE} ORDER BY date(closeApproachDate) DESC")
     fun getAsteroids(): LiveData<List<Asteroid>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
