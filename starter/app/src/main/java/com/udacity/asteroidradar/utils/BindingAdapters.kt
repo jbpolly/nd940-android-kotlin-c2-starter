@@ -1,4 +1,4 @@
-package com.udacity.asteroidradar
+package com.udacity.asteroidradar.utils
 
 import android.widget.ImageView
 import android.widget.TextView
@@ -6,6 +6,7 @@ import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
+import com.udacity.asteroidradar.R
 import com.udacity.asteroidradar.domain.ImageOfTheDay
 import java.lang.Exception
 
