@@ -3,7 +3,7 @@ package com.udacity.asteroidradar.database
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.udacity.asteroidradar.Constants
+import com.udacity.asteroidradar.utils.Constants
 import com.udacity.asteroidradar.domain.Asteroid
 
 

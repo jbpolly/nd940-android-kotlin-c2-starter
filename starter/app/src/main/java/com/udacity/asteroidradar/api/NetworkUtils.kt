@@ -1,7 +1,7 @@
 package com.udacity.asteroidradar.api
 
 import com.udacity.asteroidradar.domain.Asteroid
-import com.udacity.asteroidradar.Constants
+import com.udacity.asteroidradar.utils.Constants
 import com.udacity.asteroidradar.domain.AsteroidFilter
 import com.udacity.asteroidradar.domain.ImageOfTheDay
 import org.json.JSONObject

@@ -1,7 +1,7 @@
 package com.udacity.asteroidradar.repository
 
 import androidx.lifecycle.LiveData
-import com.udacity.asteroidradar.Constants
+import com.udacity.asteroidradar.utils.Constants
 import com.udacity.asteroidradar.api.AsteroidApi
 import com.udacity.asteroidradar.api.parseAsteroidsJsonResult
 import com.udacity.asteroidradar.api.parseImageOfTheDayJson
@@ -38,8 +38,13 @@ class AsteroidRepository(private val asteroidDatabase: AsteroidDatabase) {
         val asteroidsJson = AsteroidApi.asteroidService.getAsteroidFeed(startDateQueryString, endDateQueryString)
         val asteroidsList = parseAsteroidsJsonResult(JSONObject(asteroidsJson), filter)
         withContext(Dispatchers.IO){
+            asteroidDatabase.asteroidDao.deleteAsteroids()
             asteroidDatabase.asteroidDao.insertAll(asteroidsList)
         }
+    }
+
+    suspend fun deleteAllAsteroidsFromDb(){
+        asteroidDatabase.asteroidDao.deleteAsteroids()
     }
 
 }
