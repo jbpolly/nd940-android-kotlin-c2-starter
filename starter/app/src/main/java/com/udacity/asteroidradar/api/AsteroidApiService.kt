@@ -9,7 +9,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 private const val BASE_URL = "https://api.nasa.gov/"
-private const val NASA_API_KEY = "r17td9v9Sf83wXKePCJC1C2bF7te1l9S2HK4gAxO"
+private const val NASA_API_KEY = ""
 private const val API_KEY_QUERY_NAME = "api_key"
 
 private val retrofit = Retrofit.Builder()
